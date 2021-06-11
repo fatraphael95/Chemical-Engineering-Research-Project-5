@@ -1,0 +1,23 @@
+\noindent First and foremost, all of the simulations for the whole-plexus network were conduct by Qi Zhou\cite{2020Charles} under the assumption that blood can be considered as a suspension of deformable RBC particles in a continuous plasma phase. The binary image of Col.IV mask of mouse retinal vasculature was used to reconstruct the entire 3D micro-vascular network using a computational tool developed by Bernabeu et al. called \textit{PolNet}.\cite{bernabeu2018polnet} Next, a non-Newtonian Carreau-Yasuda (NNCY) model\cite{Bernabeu2014} was used for the whole-plexus simulation of blood flow before conducting subsequent simulations of cellular blood flow in the selected region of interests (ROIs) from the capillary bed of the whole-plexus network. Afterwards, boundary conditions (e.g. inlet/outlet of blood flow and pressure) from the NNCY simulation are extracted to initiate plasma flow simulations and perfuse RBCs continuously at a constant haematocrit of 20\% from all inlets of the selected ROIs. \\
+
+
+\noindent The RBC model developed by Timm Kr\"{u}ger\cite{KrugerTimm2012Csso} was used to model the RBCs as a deformable capsule with the hyper-elastic membrane of negligible thickness containing a viscous fluid called cytoplasm which consists of haemoglobin. This replicates the hyper-elastic behaviour of the RBC membrane in shear where total shear stress is the sum of all the viscous and elastic contributions. These simulation results were validated against \textit{in vivo} single-cell velocimetry data from Joseph et al.\cite{JosephAby2019Isbf} and Guevara-Torres et al.\cite{Guevara-Torres2016} which showed good agreement with existing experimental results. \\
+
+
+\noindent As a result, these sets of simulation data (i.e plasma$+$RBC and plasma-only) were now collected to extract relevant data sets and conduct a few data analysis. The relevant data points (e.g. flow rates, pressure drops, branch diameter etc.) were extracted to find the distinct correlations that can describe the behaviours of RBCs distribution in complex microvascular networks. Moreover, several contributing factors to the blood flow behaviour in microvascular networks were also identified to quantitatively describe how well certain reduced-order models are with the simulation data such as apparent viscosity and RBC flux ratio. \\
+
+
+\noindent The following points below are some of the key notes and assumptions made: 
+\begin{itemize}
+    \item Circular and smooth interior surface of blood vessel
+    \item Blood flow consists of only normal healthy RBCs and plasma
+    \item Since blood flow is assumed as a homogeneous shear-thinning fluid, Poiseuille's Law was used to evaluate the apparent viscosity of blood flow from simulation data. 
+    \item Both viscosities of cytoplasm (fluid inside RBC) and plasma were modelled using the viscosity of plasma
+    \item Physiological ocular perfusion pressure of 55 mmHg was used for the current simulation based on the research findings from Bernabeu et al.\cite{Bernabeu2014} 
+    % \item RBCs centre of mass do not follow underlying fluid streamlines
+    % \item Blood flow in the network does not follow Poiseuille's Law and is in the Stokes flow regime where Reynolds number is nearly zero, so inertial forces do not play a significant role.
+\end{itemize}
+
+% State why and explain you made those assumptions for each point in the bullet points above. % 
+
+% \noindent Endothelial Surface Layer (ESL) is a single cell layer that forms the surrounding layers of the blood-vessel wall where the simulation data does not take this into account given that it was assumed that the ESL is not important for now. Therefore, the interior surface of blood vessel is considered smooth. White Blood Cells are also not considered. Furthermore, we assume the geometry of the blood flow network does not change and red blood cells' properties do not change. This means that we are only focusing on healthy blood flow. \\ 

@@ -1,0 +1,48 @@
+\noindent The Phase Separation Model (PSM) consists of a list of empirical equations that were derived from experimental observations of arteriolar bifurcations in a rat mesentery and was developed by Pries et al.\cite{A.R.Pries2005Mbvi, PriesAR1990BFiM} through theoretical modelling. The PSM has established a flow-mediated mechanism that could quantitatively predict the amount of RBC fluxes in the child branches of diverging bifurcations within a network of micro-vessels. The fractional RBC flux (\textit{FQ$_{E}$}) in each child branch is given as a function of the fractional blood flow (\textit{FQ$_{B}$}) entering that child branch:
+
+\begin{eqnarray}
+\label{Pries_equation1}
+\begin{aligned}
+logit FQ_{E} & = A + B \thinspace logit \frac{(FQ_{B} - X_{0})}{(1 - 2X_{0})}
+\end{aligned}
+\end{eqnarray}
+
+\bigskip
+
+\noindent where $logit$ $x$ $=$ ln($\frac{x}{1-x}$) and X$_{0}$ < FQ$_{B}$ < 1 $-$ X$_{0}$. The fitting parameters $A$, $B$ and $X_{0}$ were obtained via linear regression analysis. $A$ represents the size difference of both child branches, $B$ describes the shape of the haematocrit profile in the parent branch and $X_{0}$ is associated with the cell-free layer thickness near the inner branch walls. \\
+
+\begin{eqnarray}
+\label{Pries_equationA}
+\begin{aligned}
+A & = -13.29\bigg[\bigg(\frac{D_{\alpha}^{2}}{D_{\beta}^{2} -1}\bigg) \bigg/ \bigg(\frac{D_{\alpha}^{2}}{D_{\beta}^{2} +1}\bigg)\bigg]\bigg[\frac{(1 - H_{D,PB})}{D_{PB}}\bigg]
+\end{aligned}
+\end{eqnarray}
+
+\begin{eqnarray}
+\label{Pries_equationB}
+\begin{aligned}
+B & = 1 + 6.98\bigg[\frac{1 - H_{D,PB}}{D_{PB}}\bigg]
+\end{aligned}
+\end{eqnarray}
+
+\begin{eqnarray}
+\label{Pries_equationX}
+\begin{aligned}
+X_{0} & = 0.964\bigg[\frac{1-H_{D,PB}}{D_{PB}}\bigg]
+\end{aligned}
+\end{eqnarray}
+
+\bigskip
+
+\noindent where $D_{\alpha}$, $D_{\beta}$, and $D_{PB}$ are the diameters of two child branches and the parent branch respectively while $H_{D,PB}$ represents the discharge haematocrit in the parent branch. The simulation data in the form of $Q^{*}_{rbc}$ against $Q^{*}_{blood}$ are plotted with the empirical curves for each bifurcation in order to observe the deviations between simulation data and the empirical predictions from PSM. \\
+
+\noindent The following points are some key notes for Pries's Phase Separation Model:\cite{A.R.Pries2005Mbvi, PriesAR1990BFiM, PRIES198981}
+\begin{itemize}
+    \item Assumes haematocrit profile in the parent branch of a diverging bifurcation is symmetrical
+    % \item Planar flow separation surface between the fluid spaces entering the child branches (A = 0)
+    \item Velocity profile in the parent branch was assumed to be parabolic
+    \item Under dilute/semi-dilute suspensions, the RBCs are assumed to follow the fluid streamlines (i.e. plasma) in the vicinity of the bifurcation
+    \item Empirical model does not take into account the bifurcation angle as it was proven to be of minor importance. 
+\end{itemize}
+
+% Put the key notes in a paragraph instead of bullet points % 

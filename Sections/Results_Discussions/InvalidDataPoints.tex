@@ -1,0 +1,28 @@
+% Include a short discussion in the section about the data points that may have additional errors due to assumptions made and the type of data analysis performed, given that the vessel network we have worked on is rather “messy” instead of ideal. 
+
+\noindent In the process of data extraction and data analysis, several noticeable outliers and additional errors were detected and removed in order to visualise most of the data points properly. (see Tables \ref{Outliers} and \ref{CBwithoutRBCs}) Most of such data points were observed due to the difficulty of accurately measuring extremely low blood flow rates of a given branch in the studied networks. These identified branches have generally small diameters and most often do not have any RBCs present. These measurements of extremely low blood flow rates are usually inaccurate and this affects the calculations of flow resistance which subsequently affects the evaluated apparent viscosity via Poiseuille's Law. \\
+
+\noindent Another plausible explanation for additional errors to occur would be due to the estimation of pressure drops across each branch within the studied networks. This was because the pressure drops across a given branch (i.e. outliers) obtained from plasma-only simulation data were found to be greater than that from blood flow simulation data. Therefore, this affects the calculations for flow resistance because of the issues in pressure measurements. Considering that flow resistance ratio (i.e. the fraction of blood flow resistance against plasma flow resistance) is equivalent to relative apparent viscosity, this explains why some of the data points have $\mu_{rel}$ $<$ 1 when it is supposed to be either equal or greater than 1 (see Table \ref{AdditionalErrors} for examples). 
+
+\begin{table}[H]
+\centering
+\caption{\textit{List of branches with additional errors due to assumptions made}
+\label{AdditionalErrors}}
+\scalebox{0.95}{
+\begin{tabular}{*{4}{c}}
+\dtoprule
+\multirow{2}{*}{\textbf{Branches}} & \multirow{2}{*}{\textbf{Flowrate (Q)}} & \multirow{2}{*}{\textbf{Pressure Drop ($\Delta$P)}} & \textbf{Flow Resistance} \\
+& & & \textbf{Ratio (R$^{*}$)} \\
+\midrule[0.5pt]
+ROI1-BOI7-CB2 & \thead{Blood flowrate\\ $>$ plasma flowrate} & \thead{Plasma pressure drop\\ > blood pressure drop} & R$^{*}$ $<<$ 1 \\
+\midrule[0.5pt]
+ROI2-BOI7-CB2 & \thead{Blood flowrate\\ $>$ plasma flowrate} & \thead{Plasma pressure drop\\ > blood pressure drop} & R$^{*}$ $<<$ 1 \\
+\midrule[0.5pt]
+ROI2-BOI15-PB & \thead{Plasma flowrate almost\\ equivalent to blood flowrate} & \thead{Plasma pressure drop\\ > blood pressure drop} & R$^{*}$ $<$ 1 \\
+\midrule[0.5pt]
+ROI3-BOI9-CB1 & \thead{Plasma flowrate almost\\ equivalent to blood flowrate} & \thead{Plasma pressure drop\\ > blood pressure drop} & R$^{*}$ $<$ 1 \\
+\dbottomrule
+\end{tabular}}
+\end{table}
+
+\noindent Given that Poiseuille's Law was used to work out the apparent viscosity from simulation data, this assumes blood viscosity is a constant variable (i.e Newtonian fluid) which is not true due to the complex rheological behaviours associated with RBCs in micro-vessels such as the shear-thinning effect. On top of this, the microvascular networks investigated were rather "messy" instead of ideal due to the geometric irregularities of vessels in the studied networks. Therefore, some abnormalities and outliers are to be expected based on the given assumptions. Overall, the majority of the data points analysed were applicable for data analysis while the identified outliers are appropriately reasoned. \\

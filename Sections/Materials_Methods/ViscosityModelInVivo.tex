@@ -1,0 +1,30 @@
+\noindent The apparent viscosity of blood in micro-vessels can be different from bulk viscosity as the non-continuum effects become more prominent especially in microvascular networks (micro-scale). Therefore, an approach for quantifying the effects of blood flow properties on the flow resistance of a micro-vessel is developed by Pries et al.\cite{PriesAR1994RtBF} using the vessel segments of terminal micro-circulatory networks in the rat mesentery. Based on \textit{in vivo} experimental results, an empirical relationship was derived to describe the relative apparent viscosity of blood as a function of branch diameter and haematocrit as shown below in Equation \ref{viscosity_equation1}:
+
+\begin{eqnarray}
+\label{viscosity_equation1}
+\begin{aligned}
+\mu_{rel} & = \bigg[1 + (\mu_{45} - 1) \cdot \frac{(1-H_{D})^{C} - 1}{(1-0.45)^{C} - 1} \cdot \bigg(\frac{D}{D - 1.1}\bigg)^{2} \bigg] \cdot \bigg(\frac{D}{D - 1.1}\bigg)^{2}
+\end{aligned}
+\end{eqnarray}
+
+\bigskip
+
+\noindent where $\mu_{45}$ is the relative apparent blood viscosity for a fixed discharge haematocrit of 0.45 based on Equation \ref{viscosity_equation2} and $D$ refers to the luminal vessel diameter. $C$ is the same parameter used in the \textit{in vitro} formulation of Pries's Viscosity Model as shown in Equation \ref{viscosity_equation3}.
+
+\begin{eqnarray}
+\label{viscosity_equation2}
+\begin{aligned}
+\mu_{45} & = 6 e^{-0.085D} + 3.2 - 2.44e^{-0.06D^{0.645}}
+\end{aligned}
+\end{eqnarray}
+
+\bigskip
+
+\noindent The difference between the empirical equations derived from \textit{in vitro} and \textit{in vivo} experiments is primarily due to the relatively short and irregularly shaped vessels in the micro-vascular networks compared to the long, straight and smooth capillary tubes. This irregularity affects the hydrodynamic diameter of the vessel which is why the Equation \ref{viscosity_equation4} was modified to Equation \ref{viscosity_equation1} by including a diameter-dependent term with its optimised parameters. \\
+
+\noindent The following points are some key notes for Pries's Viscosity Model (\textit{in vivo}):\cite{PriesAR1994RtBF}
+\begin{itemize}
+    \item Average length and diameter of vessel segments in the rat mesentery are of the order of 350 $\mu$m and 8.7 $\mu$m respectively
+    \item Presence of endothelial surface layer is considered at the inner wall of micro-vessels
+    \item Irregular inner vessels contour across the micro-circulation network and disrupts the distribution of RBCs flowing through the vessels which may give rise to additional energy dissipation. 
+\end{itemize}

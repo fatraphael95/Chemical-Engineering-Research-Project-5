@@ -1,0 +1,38 @@
+\noindent Based on original publications by Fahraeus and Lindqvist\cite{Fahrus1931THETUBES}, it has been reported that the tube diameters affect the relative apparent viscosity of blood in tube flow. However, the dependence of blood viscosity on haematocrit in the different diameter tubes are required as well in order to develop hydrodynamic models of blood flow through micro-circulation. Based on \textit{in vitro} experiments using glass capillary tubes, a set of empirical fitting equations were derived by Pries\cite{Pries1992BloodHematocrit} to achieve a quantitative description of the relative apparent viscosity as a function of tube diameter and discharge haematocrit as shown in Equation \ref{viscosity_equation4}:
+
+\begin{eqnarray}
+\label{viscosity_equation4}
+\begin{aligned}
+\mu_{rel} & = \bigg[1 + (\mu_{45} - 1) \frac{(1-H_{D})^{C} - 1}{(1-0.45)^{C} - 1} \bigg]
+\end{aligned}
+\end{eqnarray}
+
+\bigskip
+
+\noindent where $\mu_{45}$ is the relative apparent blood viscosity for a fixed discharge haematocrit of 0.45 based on Equation \ref{viscosity_equation5} and $C$ represents the shape of the viscosity dependence on haematocrit. 
+
+\begin{eqnarray}
+\label{viscosity_equation5}
+\begin{aligned}
+\mu_{45} & = 220 e^{-1.3D} + 3.2 - 2.44e^{-0.06D^{0.645}}
+\end{aligned}
+\end{eqnarray}
+
+\begin{eqnarray}
+\label{viscosity_equation3}
+\begin{aligned}
+C & = (0.8 + e^{-0.075D}) \cdot \bigg(-1 + \frac{1}{1 + 10^{-11}D^{12}} \bigg) + \frac{1}{1 + 10^{-11}D^{12}}
+\end{aligned}
+\end{eqnarray}
+
+\bigskip
+\newpage
+
+\noindent The following points are some key notes for Pries's Viscosity Model (\textit{in vitro}):\cite{Pries1992BloodHematocrit}
+\begin{itemize}
+    \item Long, straight and smooth glass capillary tubes were used (tube length $\in$ [6, 11]mm and tube diameter $\in$ [9, 40]$\mu$m)
+    \item It is assumed that the volume concentration of blood for both inlet and outlet of the capillary tube remain constant (discharge haematocrit equals to feed haematocrit)
+    \item Presence of phase separation effects are absent in the studied capillary tubes
+\end{itemize}
+
+% Put the key notes in a paragraph instead of bullet points % 

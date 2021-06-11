@@ -1,0 +1,427 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Created by: Raphael Chen
+% School of Engineering, University of Edinburgh
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper, 11pt]{article}
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+%% Sets page size and margins
+\usepackage{lipsum}
+% \usepackage[a4paper]{geometry}
+\usepackage{setspace}
+
+%% Allows for clickable references 
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage[super]{cite}
+\usepackage{notoccite}
+
+%% Language and font encodings
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[toc,page]{appendix}
+\usepackage{listings}
+\usepackage[super]{nth}
+
+
+
+%% Insert all pages of PDF into Latex File
+\usepackage{pdfpages}
+
+%% Table preamble
+\usepackage[none]{hyphenat} % Stops breaking up words in a table
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{ltxtable}
+
+\usepackage[labelfont=bf]{caption}
+
+\usepackage[singlelinecheck=false]{caption}
+\newcolumntype{+}{>{\global\let\currentrowstyle\relax}}
+\newcolumntype{^}{>{\currentrowstyle}}
+\newcommand{\rowstyle}[1]{\gdef\currentrowstyle{#1} #1\ignorespaces}
+\usepackage{makecell}
+\usepackage{booktabs}
+
+\newcommand{\dtoprule}{\specialrule{1pt}{0pt}{0.4pt}%
+\specialrule{0.3pt}{0pt}{\belowrulesep}%
+}
+\newcommand{\dbottomrule}{\specialrule{0.3pt}{0pt}{0.4pt}%
+\specialrule{1pt}{0pt}{\belowrulesep}%
+}
+
+\setlength{\tabcolsep}{12pt}
+
+\usepackage{capt-of}
+\usepackage{varwidth}
+\usepackage[vlines]{tabularht}
+
+%% Graphics preamble
+\usepackage{graphicx} % Allows you to import images
+\usepackage{float} % Allows for control of float positions
+\usepackage{subcaption}
+
+
+%% Math preamble
+\usepackage[version=4]{mhchem} % Allows us to write chemistry equations
+\usepackage{amsmath}
+\numberwithin{figure}{subsection} 
+\numberwithin{table}{subsection}
+\usepackage{bm}
+\usepackage{siunitx}
+\usepackage{xfrac} % Allows for slanted fractions	
+
+%% Matlab Code Packages
+\usepackage{listings}
+\usepackage{xcolor} %red, green, blue, yellow, cyan, magenta, black, white
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+
+%% Bullet Preamble
+\usepackage{amssymb}
+\renewcommand{\labelitemi}{$\maltese$}
+% \renewcommand{\labelitemi}{$\bullet$}
+\renewcommand{\labelitemii}{$\diamond$}
+\renewcommand{\labelitemiii}{$\circ$}
+\usepackage{enumitem}
+
+%% Tables of Content Preamble
+\usepackage[titles]{tocloft}
+\renewcommand{\cftsecfont}{\large \bfseries \sffamily}
+
+\cftsetindents{figure}{1em}{3.5em}
+\cftsetindents{table}{1em}{3.5em}
+
+\renewcommand\cftfigafterpnum{\vskip5pt\par}
+\renewcommand\cfttabafterpnum{\vskip5pt\par}
+
+
+
+%% Header and Footer Stuff
+\usepackage{fancyhdr}
+
+\usepackage[usegeometry]{typearea}% before geometry!
+\usepackage{geometry}
+\geometry{left=2cm, right=2cm, top=2cm, bottom=2cm,marginparwidth=1.75cm, headheight=0cm}
+
+
+\newcommand*{\useportrait}{%
+\clearpage
+\KOMAoptions{paper=portrait,DIV=current}%switch to portrait
+\newgeometry{% geometry settings for portrait
+left=2cm, right=2cm, top=2cm, bottom=2cm,marginparwidth=1.75cm, headheight=0cm}%
+\fancyhfoffset{0pt}% <- recalculate head and foot width for fancyhdr
+}
+
+\newcommand*{\uselandscape}{%
+\clearpage
+\KOMAoptions{paper=landscape,DIV=current}%switch to landscape
+\newgeometry{% geometry settings for landscape
+left=2cm, right=2cm, top=2cm, bottom=2cm,marginparwidth=1.75cm, headheight=0cm}%
+\fancyhfoffset{0pt}% recalculate head and foot width for fancyhdr
+}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+% \fancyhead{} % Removing the words in the head
+% \fancyfoot{} % Removing the number page in the foot
+\fancyfoot[R]{ \thepage } % Adding new type of page number towards the right and align with the text
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{2pt}
+
+
+
+% \renewcommand\cftsecafterpnum{\vskip10pt} % Adjusting the spacing between the sections
+
+%% Adjusting the font size and style
+\usepackage{abstract}
+\renewcommand{\abstractnamefont}{\Large\bfseries\sffamily} % Abstract
+% \newcommand{\abstracttextfont}{\normalfont\small}
+
+\usepackage{titlesec}
+\titleformat*{\section}{\huge\bfseries\sffamily} % sections
+\titleformat*{\subsection}{\Large\bfseries\sffamily} % subsections
+\titleformat*{\subsubsection}{\large\bfseries\sffamily} % subsubsections
+
+\usepackage[page]{appendix}
+\let\appendixpagenameorig\appendixpagename
+\renewcommand{\appendixpagename}{\Huge\bfseries\sffamily\appendixpagenameorig} % Appendices
+
+%----------------------------------------------------------------------------------------
+
+
+
+\begin{document}
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+\input{Sections/TitlePage}
+\cleardoublepage
+
+\pagenumbering{roman}
+%----------------------------------------------------------------------------------------
+%	ABSTRACT SECTION
+%----------------------------------------------------------------------------------------
+\phantomsection % to produce the right anchors for hyperlinks
+\addcontentsline{toc}{section}{Abstract}
+\input{Sections/Abstract}
+
+
+% \noindent \textbf{Aims \& Objectives}
+% \noindent The aim of this research project is to develop reduced-order models for larger-scale blood flow modelling in the microvascular networks based on setting out simple rules and assumptions such as constant red blood cell (RBC) properties, smooth blood vessels interior and only RBCs + plasma are considered in the blood flow. \\
+
+% \noindent Factors like diameter of blood vessels, flowrate of blood/RBCs, and formation of cell-free layer\cite{BaloghPeter2019} near the blood vessel walls are also taken into consideration to identify the distinctive blood flow behaviours/patterns found in the microcirculation. Hence, the plausible mechanisms of the RBCs\cite{BarnsSarah2017} will be discussed to determine how these observed/identified patterns can be quantified in a suitable and reliable reduced order model which can be applicable to a certain range of flow geometries and RBC volume fraction (haematocrit) onto larger blood vessel networks.\cite{BloodFlowSecomb}
+
+% \bigskip
+
+% \noindent \textbf{Report Structure}
+% \begin{enumerate}
+%     \item State the current challenges in the applications of simplified reduced-order models for reliable prediction of physiologically blood flow phenomena in the microcirculation.
+%     \item Collate the recent developments on applications of simplified reduced-order models in microcirculations.
+%     \item Investigate the different possible blood flow (red blood cells + plasma) behaviours and characteristics from the high-fidelity simulation data of blood flow in complex microvascular networks.
+%     \item Identify any correlations between quantifiable variables or distinct patterns/configurations of the RBC distribution in a given microvascular network from the high-fidelity simulation data.
+%     \item Using the identified patterns, suggest how these behaviours and correlations fit in a suitable / appropriate particle-based model for the range of scales between micro and macro. 
+% \end{enumerate}
+
+
+\cleardoublepage
+
+%----------------------------------------------------------------------------------------
+%	DECLARATION & ACKNOWLEDGEMENT
+%----------------------------------------------------------------------------------------
+% Declaration and Acknowledgements
+\phantomsection % to produce the right anchors for hyperlinks
+\addcontentsline{toc}{section}{Declaration \& Acknowledgements}
+
+\input{Sections/Declaration_Acknowledgements}
+\cleardoublepage
+
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+% \phantomsection % to produce the right anchors for hyperlinks
+% \addcontentsline{toc}{section}{Contents}
+
+\renewcommand\contentsname{\Huge\sffamily\bfseries Contents}
+%% Table of Contents Stuff
+\begin{spacing}{0.9}
+% \thispagestyle{empty} % To remove the page style
+\tableofcontents
+\end{spacing}
+\cleardoublepage
+
+
+%% List of figures, list of tables
+\phantomsection % to produce the right anchors for hyperlinks
+\addcontentsline{toc}{section}{List of Figures}
+\listoffigures
+\cleardoublepage
+
+\phantomsection % to produce the right anchors for hyperlinks
+\addcontentsline{toc}{section}{List of Tables}
+\listoftables
+\cleardoublepage
+
+
+%% Main Body Stuff
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+
+%----------------------------------------------------------------------------------------
+%	LIST OF SYMBOLS AND ABBREVIATIONS
+%----------------------------------------------------------------------------------------
+\section{List of Symbols and Abbreviations}%\label{sec:List of Symbols and Abbreviations}
+%List of all symbols used in this paper, with relevant units.
+\input{Sections/ListOfSymbols}
+
+% https://www.overleaf.com/learn/latex/nomenclatures
+
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION SECTION
+%----------------------------------------------------------------------------------------
+\newpage
+\section{Introduction}
+\input{Sections/Introduction/Main_Introduction}
+
+
+%----------------------------------------------------------------------------------------
+%	LITERATURE REVIEW SECTION
+%----------------------------------------------------------------------------------------
+\newpage
+\section{Background of Blood Flow Distributions in the Microcirculation}
+
+\input{Sections/Literature_Review/Summary}
+
+\bigskip
+
+\subsection{Mechanical Properties of Red Blood Cells}
+\label{MechanicalPropertiesOfRBC}
+\input{Sections/Literature_Review/MechanicalPropertiesOfRBC}
+
+\subsection{Difference between \textit{in vivo} and \textit{in vitro} experiments}
+\label{DifferenceIn_Invivo_Invitro}
+\input{Sections/Literature_Review/InVivo_InVitro}
+
+\subsection{Blood Vessel Topology and Geometries}
+\label{Topology_Geometries}
+\input{Sections/Literature_Review/Topology_Geometries}
+
+\subsection{Mechanisms that affect Radial Distribution of RBCs}
+\label{BloodFlowMechanisms}
+\input{Sections/Literature_Review/MechanismsThatAffectRadicalDistributionOfRBCs} 
+
+% Different Types of Radial Distribution of RBCs in Micro-circulation Network: 
+% -> Size Exclusion Effect
+% -> Wall-Induced Lift
+% -> Shear-Gradient-Induced Lift
+% -> Shear-Induced Diffusion
+
+\subsection{Plausible Haemodynamic Effects}
+\label{HaemodynamicEffects}
+\input{Sections/Literature_Review/HaemodynamicEffects}
+
+\subsection{Current Challenges in Reduced-Order Models}
+\label{CurrentChallenges}
+\input{Sections/Literature_Review/CurrentChallengesInROM}
+
+\subsection{Research Gaps in Literature}
+\label{MissingGaps}
+\input{Sections/Literature_Review/MissingGaps}
+
+
+%----------------------------------------------------------------------------------------
+%	MATERIALS AND METHODS SECTION
+%----------------------------------------------------------------------------------------
+\newpage
+\section{Materials \& Methods}
+\input{Sections/Materials_Methods/Summary}
+
+\bigskip
+
+\subsection{Introduction of Simulation Data}
+\label{GenerationOfSimulationData}
+\input{Sections/Materials_Methods/GenerationOfSimulationData}
+
+\subsection{Post-Processing of Simulation Data}
+\label{Post_Processing}
+\input{Sections/Materials_Methods/PostProcessingSimulationData}
+\bigskip
+
+\subsection{Reduced-Order Models}
+\label{Reduced_Order_Models}
+\subsubsection{Pries's Phase Separation Model}
+\input{Sections/Materials_Methods/PriesPSM}
+\bigskip
+
+\subsubsection{Pries's Viscosity Model (\textit{in vitro})}
+\input{Sections/Materials_Methods/ViscosityModel-InVitro}
+\bigskip
+
+\subsubsection{Pries's Viscosity Model (\textit{in vivo})}
+\input{Sections/Materials_Methods/ViscosityModelInVivo}
+
+
+%----------------------------------------------------------------------------------------
+%	RESULTS AND DISCUSSIONS SECTION
+%----------------------------------------------------------------------------------------
+\newpage
+\section{Data Analysis with Discussions}
+\input{Sections/Results_Discussions/Summary}
+
+\bigskip
+
+\subsection{Bifurcation \& Vessel Selection}
+\label{Vessel_Bifurcation_Selection}
+\input{Sections/Results_Discussions/VesselBifurcationSelection}
+
+\subsection{Prediction of RBC Enrichment/Depletion}
+\label{RBC_Enrichment_Depletion}
+\input{Sections/Results_Discussions/RBC_Enrichment_Depletion}
+
+\subsection{Presence of Plasma Skimming Effect in microvascular network}
+\label{Plasma_Skimming_Effects}
+\input{Sections/Results_Discussions/PlasmaSkimmingEffects}
+
+\subsection{Breakdown in Pries Viscosity Models (\textit{in vitro} \& \textit{in vivo}) with simulation data}
+\label{BreakdownInPriesViscosityModels}
+\input{Sections/Results_Discussions/BreakdownInViscosityModels}
+
+\subsection{Presence of F{\aa}hr{\ae}us-Lindqvist Effect}
+\label{Fahraeus_Lindqvist_Effect}
+\input{Sections/Results_Discussions/FahraeusLindqvistEffects}
+
+% Importance of Branch Length in Apparent Viscosity Estimation
+\subsection{Importance of Branch Length and Distance Ratio}
+\label{BranchLength_DistanceRatio}
+\input{Sections/Results_Discussions/ImportanceOfBranchLengthAndDistanceRatio}
+
+\subsection{Contributing factors to Asymmetric RBC Distribution}
+\label{ContributingFactorsTOAsymmetricRBCDistribution}
+\input{Sections/Results_Discussions/ContributingFactorsToAsymmetricRBCDistribution}
+
+\subsection{Invalid Data Points within Post-Processing Data}
+\label{InvalidDataPoints}
+\input{Sections/Results_Discussions/InvalidDataPoints}
+
+
+%----------------------------------------------------------------------------------------
+%	CONCLUSION AND FUTURE WORKS SECTION
+%----------------------------------------------------------------------------------------
+\newpage
+\section{Conclusions \& Future Works}
+\input{Sections/Conclusion_FutureWorks/Main_Conclusion_FutureWorks}
+
+
+%----------------------------------------------------------------------------------------
+%	REFERENCES SECTION
+%----------------------------------------------------------------------------------------
+\newpage
+\bibliographystyle{IEEEtran}
+\bibliography{References}
+\addcontentsline{toc}{section}{References}
+
+
+%----------------------------------------------------------------------------------------
+%	APPENDICES SECTION
+%----------------------------------------------------------------------------------------
+\uselandscape
+\begin{appendices}
+\section{Supplementary Materials \& Analysis}
+\subsection{Flow Patterns across studied microvascular networks}
+\input{Sections/Appendices/FlowPatterns}
+
+\useportrait
+\subsection{System Haematocrit in microvascular networks}
+\label{SystemHaematocritInMicrovascularNetworks}
+\input{Sections/Appendices/SystemHaematocrit}
+
+\subsection{Identification of Successive Bifurcations}
+\input{Sections/Appendices/SuccessiveBOIs}
+
+\uselandscape
+\subsection{Evaluation of Simulation Data against Phase Separation Model}
+\label{EvaluationOfSimulationDataVSPSM}
+\input{Sections/Appendices/SimulationData_VS_PSM}
+
+\useportrait
+\subsection{Evaluation of Simulation Data against Pries Viscosity Models}
+\label{EvaluationOfSimulationDataVSPVM}
+\input{Sections/Appendices/SimulationData_VS_ViscosityModels}
+
+\useportrait
+\subsection{List of Outliers and Child Branches without any RBCs}
+\input{Sections/Appendices/Outliers}
+\end{appendices}
+
+
+\end{document}
