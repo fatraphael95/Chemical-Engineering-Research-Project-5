@@ -14,7 +14,7 @@ Diseases such as cancer and cardiovascular disease frequently and adversely affe
 
 | Research Project Poster |
 |:---:|
-|[![Research Project Poster](https://drive.google.com/file/d/1FuFJZ9xn7PNYZgy9Zar3QVRXMOAZG7Ns/view?usp=sharing.png)]|
+|[![Research Project Poster](https://drive.google.com/file/d/1FuFJZ9xn7PNYZgy9Zar3QVRXMOAZG7Ns/view?usp=sharing.png)]|(https://drive.google.com/file/d/1wZvsLG3wuMpcpepBTYUzw1k2Jo8GvRZG/view?usp=sharing.pdf)
 
 
 ## Credit
