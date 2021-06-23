@@ -1,5 +1,5 @@
 # Chemical-Engineering-Research-Project-5
-Masters of Engineering Dissertation
+**Masters of Engineering Dissertation**
 
 **Thesis Title:** Red Blood Cell Distribution in Complex Microvascular Networks
 
