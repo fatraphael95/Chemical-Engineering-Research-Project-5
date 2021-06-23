@@ -10,3 +10,13 @@ Diseases such as cancer and cardiovascular disease frequently and adversely affe
 [Research Project Poster](https://drive.google.com/file/d/1wZvsLG3wuMpcpepBTYUzw1k2Jo8GvRZG/view?usp=sharing.pdf)
 
 [Thesis Report](https://drive.google.com/file/d/1eTM7QyYrsQic5byThsyk7CzwHJ53U1ks/view?usp=sharing.pdf)
+
+
+| Research Project Poster |
+|:---:|
+|[![Research Project Poster](https://drive.google.com/file/d/1FuFJZ9xn7PNYZgy9Zar3QVRXMOAZG7Ns/view?usp=sharing.png)]|
+
+
+## Credit
+
+[**LaTeX**](http://www.latex-project.org) is a fantastic typesetting program that a lot of people use these days, especially the math and computer science people in academia.
