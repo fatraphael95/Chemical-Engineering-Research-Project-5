@@ -14,7 +14,7 @@ Diseases such as cancer and cardiovascular disease frequently and adversely affe
 
 | Research Project Poster |
 |:---:|
-[![Research Project Poster](https://github.com/fatraphael95/Chemical-Engineering-Research-Project-5/blob/e8dc5e6e04845429e11a21b32691963814d9c6f3/Research_Project_Poster_Presentation%20-%20Final.png)]
+![Research Project Poster](https://github.com/fatraphael95/Chemical-Engineering-Research-Project-5/blob/e8dc5e6e04845429e11a21b32691963814d9c6f3/Research_Project_Poster_Presentation%20-%20Final.png)
 
 
 ## Credit
